@@ -1,0 +1,17 @@
+apiVersion: k3d.io/v1alpha5
+kind: Simple
+metadata:
+  name: lms
+servers: 1
+agents: 2
+
+# Порты для доступа к Ingress внутри кластера.
+# На хосте: 8080 -> внутри кластера: 80
+# На хосте: 8443 -> внутри кластера: 443
+ports:
+  - port: 8080:80
+    nodeFilters:
+      - loadbalancer
+  - port: 8443:443
+    nodeFilters:
+      - loadbalancer

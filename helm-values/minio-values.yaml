@@ -1,0 +1,16 @@
+# Настройки для официального minio/minio.
+# Важно: одиночный режим и 1 реплика (для учебного стенда и ограниченной памяти).
+mode: standalone
+replicas: 1
+
+persistence:
+  enabled: true
+  # размер задаётся через --set persistence.size в scripts/20-infra-install.sh
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
