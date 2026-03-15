@@ -1,0 +1,82 @@
+{
+  "course_id": "python_basics_101",
+  "title": "Python для начинающих",
+  "description": "Базовый курс по программированию на Python",
+  "enforce_sequence": true,
+  "certificate_rule": {
+    "expression": "completed_all_lessons and avg_score >= 80",
+    "description": "Пройдите все уроки и наберите средний балл не ниже 80"
+  },
+  "modules": [
+    {
+      "module_id": "module_1",
+      "title": "Введение в Python",
+      "description": "Первые шаги",
+      "order": 1,
+      "lessons": [
+        {
+          "lesson_id": "lesson_1_1",
+          "title": "Установка Python",
+          "type": "video",
+          "content": {
+            "filename": "python_setup.mp4"
+          },
+          "duration_minutes": 10,
+          "order": 1
+        },
+        {
+          "lesson_id": "lesson_1_2",
+          "title": "Первая программа",
+          "type": "text",
+          "content": {
+            "text": "print('Hello, World!')\n\nЭто ваша первая программа..."
+          },
+          "duration_minutes": 5,
+          "order": 2
+        }
+      ],
+      "test": {
+        "test_id": "test_1",
+        "title": "Проверка знаний",
+        "passing_score": 70,
+        "attempts_allowed": 3,
+        "questions": [
+          {
+            "question_id": "q1",
+            "text": "Какая функция выводит текст на экран?",
+            "type": "single_choice",
+            "options": ["input()", "print()", "len()", "range()"],
+            "correct_answers": ["print()"],
+            "points": 1.0
+          },
+          {
+            "question_id": "q2",
+            "text": "Какие типы данных есть в Python?",
+            "type": "multiple_choice",
+            "options": ["int", "string", "float", "bool", "character"],
+            "correct_answers": ["int", "string", "float", "bool"],
+            "points": 2.0
+          }
+        ]
+      }
+    },
+    {
+      "module_id": "module_2",
+      "title": "Основы синтаксиса",
+      "description": "Переменные, типы данных, операции",
+      "order": 2,
+      "lessons": [
+        {
+          "lesson_id": "lesson_2_1",
+          "title": "Переменные",
+          "type": "video",
+          "content": {
+            "filename": "variables.mp4"
+          },
+          "duration_minutes": 15,
+          "order": 1
+        }
+      ]
+    }
+  ]
+}
